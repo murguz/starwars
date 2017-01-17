@@ -1,3 +1,9 @@
+.cont-back {
+    background-color: #EEF1F0;
+    border: 1px solid #E6E6E6;
+    margin-top: 20px;
+}
+
 .search-bar {
     background-color: white;
     margin-top: 10px;
