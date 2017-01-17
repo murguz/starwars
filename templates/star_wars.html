@@ -1,0 +1,29 @@
+<div class="container" style="background-color: #EEF1F0; border: 1px solid #E6E6E6; margin-top: 20px;">
+    <div class="row">
+        <div class="col-sm-12 header">
+            <img src="img/logo.gif">
+            <div ng-show="ctrl.view == 1" class="finish-loading" ng-click="finish()">FINISH LOADING</div>
+        </div>
+        <div class="col-sm-4">
+            <search-bar on-search="ctrl.search(event)"></search-bar>
+        </div>
+        <div class="col-sm-8">
+            <div ng-hide="ctrl.view >= 2" class="main">
+                <div ng-show="ctrl.view == 0" class="place-holder">Use the form to search for <br />"People" and "Movies"</div>
+                <div ng-show="ctrl.view == 1" class="place-holder"><div class="loader"></div> <br />Searching</div>
+            </div>
+            <div ng-show="ctrl.view == 2" class="search-bar">
+                <div class="result-item" ng-repeat="result in ctrl.results">
+                    <h2>{{result.name}}</h2>
+                    <button type="button" class="btn btn-default" ng-click="ctrl.toPeople(result.url)">See Details</button>
+                </div>
+            </div>
+            <div ng-show="ctrl.view == 3" class="search-bar">
+                <div class="result-item" ng-repeat="result in ctrl.results">
+                    <h2>{{result.title}}</h2>
+                    <button type="button" class="btn btn-default" ng-click="ctrl.toMovie(result.url)">See Details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

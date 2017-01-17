@@ -1,0 +1,25 @@
+<div class="container" style="background-color: #EEF1F0; border: 1px solid #E6E6E6; margin-top: 20px;">
+    <div class="row">
+        <div class="col-sm-12 header">
+            <img src="img/logo.gif">
+        </div>
+        <div class="col-sm-12 people">
+            <div class="search-bar">
+                <div class="row">
+                    <div class="col-sm-6 details">
+                        <h2>{{ctrl.data.title}}</h2>
+                        <div>Opening Crawl:</div>
+                        <div style="white-space: pre;">{{ctrl.data.opening_crawl}}</div>
+                    </div>
+                    <div class="col-sm-6 details">
+                        <h2>&nbsp;</h2>
+                        <div>Characters:</div>
+                        <star-person-name ng-repeat="character in ctrl.data.characters" url="character"></star-person-name>
+                    </div>
+                </div>
+
+            </div>
+            <button type="button" class="btn btn-primary" ng-click="ctrl.toBack()">Back</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="container" style="background-color: #EEF1F0; border: 1px solid #E6E6E6; margin-top: 20px;">
+    <div class="row">
+        <div class="col-sm-12 header">
+            <img src="img/logo.gif">
+        </div>
+        <div class="col-sm-12 people">
+            <div class="search-bar">
+                <div class="row">
+                    <div class="col-sm-6 details">
+                        <h2>{{ctrl.data.name}}</h2>
+                        <div>Birth Year: {{ctrl.data.birth_year}}</div>
+                        <div>Gender: {{ctrl.data.gender}}</div>
+                        <div>Eye Color: {{ctrl.data.eye_color}}</div>
+                        <div>Hair Color Color: {{ctrl.data.hair_color}}</div>
+                        <div>Height: {{ctrl.data.height}}</div>
+                        <div>Mass: {{ctrl.data.mass}}</div>
+                    </div>
+                    <div class="col-sm-6 details">
+                        <h2>&nbsp;</h2>
+                        <div>Movies:</div>
+                        <star-movie-name ng-repeat="film in ctrl.data.films" url="film"></star-movie-name>
+                    </div>
+                </div>
+
+            </div>
+            <button type="button" class="btn btn-primary" ng-click="ctrl.toBack()">Back</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="search-bar">
+    <h2>Select what you are searching for:</h2>
+    <label class="radio-inline"><input type="radio" name="opt_radio" ng-model="ctrl.searchType" value="0">People</label>
+    <label class="radio-inline"><input type="radio" name="opt_radio" ng-model="ctrl.searchType" value="1">Movies</label>
+
+    <div ng-hide="ctrl.searchType == null">
+        <input type="text" class="form-control" id="usr" ng-model="ctrl.searchText" placeholder="{{ctrl.searchType == 0 ? 'e.g. Chewbacca, Yoda, Boba Fett' : 'e.g. Empire Strikes Back, The Force Awakens'}}">
+        <button type="button" class="btn btn-default" ng-click="ctrl.search()">Search</button>
+    </div>
+</div>
